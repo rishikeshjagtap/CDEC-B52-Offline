@@ -9,23 +9,6 @@
 
 Navigating the Linux file system is fundamental to working with Linux. Let's learn how to move around efficiently.
 
-### File System Structure
-
-```mermaid
-graph TD
-    A[/ Root] --> B[/home]
-    A --> C[/etc]
-    A --> D[/var]
-    B --> E[/abhilash]
-    C --> F[config files]
-    D --> G[logs]
-    
-    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
-    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
-    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
-    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
-```
-
 ### Essential Navigation Commands
 
 #### 1. Print Working Directory (pwd)
