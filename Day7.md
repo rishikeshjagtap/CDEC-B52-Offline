@@ -179,7 +179,22 @@ vim existing.txt
 | `k` | Up one line | Move up |
 | `j` | Down one line | Move down |
 
-**Visual Representation:**
+**Visual Navigation Diagram:**
+```mermaid
+graph TD
+    A[Current Cursor Position] --> B[Press k<br/>⬆️ Move Up]
+    A --> C[Press j<br/>⬇️ Move Down]
+    A --> D[Press h<br/>⬅️ Move Left]
+    A --> E[Press l<br/>➡️ Move Right]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+```
+
+**Text Representation:**
 ```
         k (up)
         ↑
@@ -316,6 +331,29 @@ Press 'dw': ", world!" (deleted "Hello")
 Press 'dd': (deletes entire line)
 ```
 
+**Visual Delete Operations:**
+```mermaid
+graph LR
+    A[Original Text<br/>Hello, world!<br/>^cursor] --> B[Press x<br/>Delete char]
+    B --> C[Result: ello, world!]
+    
+    D[Original Text<br/>Hello, world!<br/>^cursor] --> E[Press dw<br/>Delete word]
+    E --> F[Result: , world!]
+    
+    G[Original Line<br/>Hello, world!] --> H[Press dd<br/>Delete line]
+    H --> I[Result: Line deleted]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
+    style H fill:#30cfd0,stroke:#333,stroke-width:2px,color:#fff
+    style I fill:#999,stroke:#333,stroke-width:2px,color:#fff
+```
+
 #### Delete with Count
 
 | Command | Action | Example |
@@ -375,6 +413,23 @@ After 'yy' on line 1, then 'p' on line 2:
 Line 1: Hello
 Line 2: World
 Line 3: Hello  (pasted)
+```
+
+**Visual Copy-Paste Operation:**
+```mermaid
+graph TD
+    A[Original Text<br/>Line 1: Hello<br/>Line 2: World] --> B[Press yy on Line 1<br/>Copy line]
+    B --> C[Line copied to buffer]
+    C --> D[Move to Line 2]
+    D --> E[Press p<br/>Paste]
+    E --> F[Result:<br/>Line 1: Hello<br/>Line 2: World<br/>Line 3: Hello]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ### Cutting Text

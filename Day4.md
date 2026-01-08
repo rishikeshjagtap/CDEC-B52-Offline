@@ -205,9 +205,20 @@ ls -l /home/abhilash
 pwd
 ```
 
-**Output:**
+**Text Output:**
 ```
 /home/abhilash
+```
+
+**Visual Diagram:**
+```mermaid
+graph TD
+    A[Root /] --> B[home]
+    B --> C[abhilash<br/>📍 Current Location]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:3px,color:#fff
 ```
 
 #### Step 3: List Files
@@ -215,9 +226,28 @@ pwd
 ls
 ```
 
-**Output:**
+**Text Output:**
 ```
 Desktop  Documents  Downloads  Music  Pictures  Videos
+```
+
+**Visual Diagram:**
+```mermaid
+graph LR
+    A[Current Directory<br/>/home/abhilash] --> B[📁 Desktop]
+    A --> C[📁 Documents]
+    A --> D[📁 Downloads]
+    A --> E[📁 Music]
+    A --> F[📁 Pictures]
+    A --> G[📁 Videos]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
 ```
 
 #### Step 4: List Files with Details
@@ -225,7 +255,7 @@ Desktop  Documents  Downloads  Music  Pictures  Videos
 ls -l
 ```
 
-**Output:**
+**Text Output:**
 ```
 total 24
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Desktop
@@ -234,6 +264,25 @@ drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Downloads
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Music
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Pictures
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Videos
+```
+
+**Visual Diagram:**
+```mermaid
+graph TD
+    A[ls -l Output] --> B[📁 Desktop<br/>drwxr-xr-x<br/>Size: 4.0K<br/>Owner: abhilash]
+    A --> C[📁 Documents<br/>drwxr-xr-x<br/>Size: 4.0K<br/>Owner: abhilash]
+    A --> D[📁 Downloads<br/>drwxr-xr-x<br/>Size: 4.0K<br/>Owner: abhilash]
+    A --> E[📁 Music<br/>drwxr-xr-x<br/>Size: 4.0K<br/>Owner: abhilash]
+    A --> F[📁 Pictures<br/>drwxr-xr-x<br/>Size: 4.0K<br/>Owner: abhilash]
+    A --> G[📁 Videos<br/>drwxr-xr-x<br/>Size: 4.0K<br/>Owner: abhilash]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
 ```
 
 #### Step 5: Get Help
@@ -689,9 +738,18 @@ These commands help you understand your Linux system:
 uname
 ```
 
-**Output:**
+**Text Output:**
 ```
 Linux
+```
+
+**Visual Diagram:**
+```mermaid
+graph LR
+    A[uname Command] --> B[Operating System<br/>🐧 Linux]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:2px,color:#fff
+    style B fill:#43e97b,stroke:#333,stroke-width:3px,color:#fff
 ```
 
 **All System Information:**
@@ -699,9 +757,26 @@ Linux
 uname -a
 ```
 
-**Output:**
+**Text Output:**
 ```
 Linux ubuntu-server 5.15.0-72-generic #79-Ubuntu SMP Wed Apr 19 08:22:18 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+**Visual Breakdown:**
+```mermaid
+graph TD
+    A[uname -a Output] --> B[OS: Linux]
+    A --> C[Hostname: ubuntu-server]
+    A --> D[Kernel: 5.15.0-72-generic]
+    A --> E[Architecture: x86_64]
+    A --> F[Type: GNU/Linux]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **Kernel Version:**
@@ -799,7 +874,7 @@ Model name:          Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
 free
 ```
 
-**Output:**
+**Text Output:**
 ```
               total        used        free      shared  buff/cache   available
 Mem:        8168448     2048000     1024000      512000     5096448     5608448
@@ -811,11 +886,32 @@ Swap:      2097152           0     2097152
 free -h
 ```
 
-**Output:**
+**Text Output:**
 ```
               total        used        free      shared  buff/cache   available
 Mem:           7.8Gi       2.0Gi       1.0Gi       512Mi       4.9Gi       5.4Gi
 Swap:          2.0Gi          0B       2.0Gi
+```
+
+**Visual Memory Diagram:**
+```mermaid
+graph LR
+    A[Memory: 7.8Gi Total] --> B[Used: 2.0Gi<br/>25.6%]
+    A --> C[Free: 1.0Gi<br/>12.8%]
+    A --> D[Buff/Cache: 4.9Gi<br/>62.8%]
+    A --> E[Available: 5.4Gi<br/>69.2%]
+    
+    F[Swap: 2.0Gi Total] --> G[Used: 0B<br/>0%]
+    F --> H[Free: 2.0Gi<br/>100%]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#f093fb,stroke:#333,stroke-width:3px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
+    style H fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 #### 6. Disk Space
@@ -825,7 +921,7 @@ Swap:          2.0Gi          0B       2.0Gi
 df
 ```
 
-**Output:**
+**Text Output:**
 ```
 Filesystem     1K-blocks    Used Available Use% Mounted on
 /dev/sda1       52428800 10485760  41943040  20% /
@@ -837,11 +933,32 @@ Filesystem     1K-blocks    Used Available Use% Mounted on
 df -h
 ```
 
-**Output:**
+**Text Output:**
 ```
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda1        50G   10G   40G  20% /
 /dev/sda2       100G   50G   50G  50% /home
+```
+
+**Visual Disk Usage Diagram:**
+```mermaid
+graph TD
+    A[Root Partition<br/>/dev/sda1] --> B[Total: 50G]
+    B --> C[Used: 10G<br/>20% ████░░░░░░]
+    B --> D[Available: 40G<br/>80%]
+    
+    E[Home Partition<br/>/dev/sda2] --> F[Total: 100G]
+    F --> G[Used: 50G<br/>50% █████░░░░░]
+    F --> H[Available: 50G<br/>50%]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#f093fb,stroke:#333,stroke-width:3px,color:#fff
+    style F fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style H fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **Specific Directory:**

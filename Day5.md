@@ -49,9 +49,28 @@ pwd
 ls
 ```
 
-**Output:**
+**Text Output:**
 ```
 Desktop  Documents  Downloads  Music  Pictures  Videos
+```
+
+**Visual Directory Structure:**
+```mermaid
+graph TD
+    A[Current Directory] --> B[📁 Desktop]
+    A --> C[📁 Documents]
+    A --> D[📁 Downloads]
+    A --> E[📁 Music]
+    A --> F[📁 Pictures]
+    A --> G[📁 Videos]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
 ```
 
 **Detailed Listing:**
@@ -59,7 +78,7 @@ Desktop  Documents  Downloads  Music  Pictures  Videos
 ls -l
 ```
 
-**Output:**
+**Text Output:**
 ```
 total 24
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Desktop
@@ -68,6 +87,21 @@ drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Downloads
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Music
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Pictures
 drwxr-xr-x 2 abhilash abhilash 4096 Jan 15 10:30 Videos
+```
+
+**Visual Permissions Breakdown:**
+```mermaid
+graph LR
+    A[drwxr-xr-x] --> B[d = Directory]
+    A --> C[rwx = Owner<br/>Read, Write, Execute]
+    A --> D[r-x = Group<br/>Read, Execute]
+    A --> E[r-x = Others<br/>Read, Execute]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **All Files (Including Hidden):**
@@ -291,7 +325,7 @@ mkdir dir1 dir2 dir3
 mkdir -p projects/2024/january
 ```
 
-**Output:**
+**Text Output:**
 *(No output - creates entire path)*
 
 **Verify Nested Structure:**
@@ -299,11 +333,22 @@ mkdir -p projects/2024/january
 tree projects
 ```
 
-**Output:**
+**Text Output:**
 ```
 projects/
 └── 2024
     └── january
+```
+
+**Visual Directory Tree:**
+```mermaid
+graph TD
+    A[projects/] --> B[2024/]
+    B --> C[january/]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 #### 2. Remove Directory (rmdir)
@@ -506,11 +551,24 @@ Learn different ways to view and examine file contents in Linux.
 cat file.txt
 ```
 
-**Output:**
+**Text Output:**
 ```
 This is line 1
 This is line 2
 This is line 3
+```
+
+**Visual File Content:**
+```mermaid
+graph TD
+    A[📄 file.txt] --> B[Line 1: This is line 1]
+    A --> C[Line 2: This is line 2]
+    A --> D[Line 3: This is line 3]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **View Multiple Files:**
@@ -578,7 +636,7 @@ This is line 3
 head file.txt
 ```
 
-**Output:**
+**Text Output:**
 ```
 Line 1
 Line 2
@@ -592,18 +650,42 @@ Line 9
 Line 10
 ```
 
+**Visual Head Command:**
+```mermaid
+graph TD
+    A[📄 file.txt<br/>100 lines total] --> B[head command] --> C[First 10 Lines<br/>Displayed]
+    A --> D[Remaining 90 lines<br/>Hidden]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#999,stroke:#333,stroke-width:2px,color:#fff
+```
+
 **First N Lines:**
 ```bash
 head -n 5 file.txt
 ```
 
-**Output:**
+**Text Output:**
 ```
 Line 1
 Line 2
 Line 3
 Line 4
 Line 5
+```
+
+**Visual Head -n Command:**
+```mermaid
+graph TD
+    A[📄 file.txt] --> B[head -n 5] --> C[First 5 Lines<br/>✅ Displayed]
+    A --> D[Lines 6-100<br/>❌ Hidden]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#999,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 #### 4. View Last Lines (tail)
@@ -613,7 +695,7 @@ Line 5
 tail file.txt
 ```
 
-**Output:**
+**Text Output:**
 ```
 Line 91
 Line 92
@@ -627,18 +709,42 @@ Line 99
 Line 100
 ```
 
+**Visual Tail Command:**
+```mermaid
+graph TD
+    A[📄 file.txt<br/>100 lines total] --> B[tail command] --> C[Last 10 Lines<br/>Displayed]
+    A --> D[First 90 lines<br/>Hidden]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#999,stroke:#333,stroke-width:2px,color:#fff
+```
+
 **Last N Lines:**
 ```bash
 tail -n 5 file.txt
 ```
 
-**Output:**
+**Text Output:**
 ```
 Line 96
 Line 97
 Line 98
 Line 99
 Line 100
+```
+
+**Visual Tail -n Command:**
+```mermaid
+graph TD
+    A[📄 file.txt] --> B[tail -n 5] --> C[Last 5 Lines<br/>✅ Displayed]
+    A --> D[Lines 1-95<br/>❌ Hidden]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#999,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 **Follow File (watch for new lines):**
@@ -813,8 +919,17 @@ ls -l *.txt
 cp file.txt /home/abhilash/Documents/
 ```
 
-**Output:**
+**Text Output:**
 *(No output - file copied to directory)*
+
+**Visual Copy Operation:**
+```mermaid
+graph LR
+    A[📄 file.txt<br/>Source] -->|cp command| B[📄 file.txt<br/>Destination<br/>/home/abhilash/Documents/]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#43e97b,stroke:#333,stroke-width:3px,color:#fff
+```
 
 **Copy Multiple Files:**
 ```bash
@@ -901,8 +1016,19 @@ mv oldname.txt newname.txt
 mv file.txt /home/abhilash/Documents/
 ```
 
-**Output:**
+**Text Output:**
 *(No output - file moved)*
+
+**Visual Move Operation:**
+```mermaid
+graph LR
+    A[📄 file.txt<br/>Current Location] -->|mv command| B[📄 file.txt<br/>New Location<br/>/home/abhilash/Documents/]
+    A -.->|Original deleted| C[❌]
+    
+    style A fill:#fa709a,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#43e97b,stroke:#333,stroke-width:3px,color:#fff
+    style C fill:#999,stroke:#333,stroke-width:2px,color:#fff
+```
 
 **Move Multiple Files:**
 ```bash

@@ -104,7 +104,7 @@ Let's explore what's inside the root directory (`/`):
 ls -l /
 ```
 
-**Output:**
+**Text Output:**
 ```
 total 72
 drwxr-xr-x   2 root root  4096 Jan 15 10:00 bin
@@ -125,6 +125,35 @@ dr-xr-xr-x  13 root root     0 Jan 15 10:00 sys
 drwxrwxrwt   8 root root  4096 Jan 15 10:00 tmp
 drwxr-xr-x  11 root root  4096 Jan 15 10:00 usr
 drwxr-xr-x  13 root root  4096 Jan 15 10:00 var
+```
+
+**Visual Root Directory Structure:**
+```mermaid
+graph TD
+    A[/ Root Directory] --> B[📁 bin<br/>Essential binaries]
+    A --> C[📁 boot<br/>Boot files]
+    A --> D[📁 dev<br/>Device files]
+    A --> E[📁 etc<br/>Configuration]
+    A --> F[📁 home<br/>User directories]
+    A --> G[📁 lib<br/>Libraries]
+    A --> H[📁 usr<br/>User programs]
+    A --> I[📁 var<br/>Variable data]
+    A --> J[📁 tmp<br/>Temporary files]
+    A --> K[📁 proc<br/>Process info]
+    A --> L[📁 sbin<br/>System binaries]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:4px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
+    style H fill:#30cfd0,stroke:#333,stroke-width:2px,color:#fff
+    style I fill:#667eea,stroke:#333,stroke-width:2px,color:#fff
+    style J fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style K fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style L fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 ### Root Directory Breakdown
@@ -256,7 +285,7 @@ pwd
 ls -la ~
 ```
 
-**Output:**
+**Text Output:**
 ```
 total 48
 drwxr-xr-x 15 abhilash abhilash 4096 Jan 15 10:00 .
@@ -266,6 +295,27 @@ drwxr-xr-x  3 root     root     4096 Jan 15 10:00 ..
 drwxr-xr-x  2 abhilash abhilash 4096 Jan 15 10:00 Desktop
 drwxr-xr-x  2 abhilash abhilash 4096 Jan 15 10:00 Documents
 drwxr-xr-x  2 abhilash abhilash 4096 Jan 15 10:00 Downloads
+```
+
+**Visual Home Directory Structure:**
+```mermaid
+graph TD
+    A[/home/abhilash] --> B[📁 .<br/>Current directory]
+    A --> C[📁 ..<br/>Parent directory]
+    A --> D[📄 .bash_history<br/>Hidden file]
+    A --> E[📄 .bashrc<br/>Hidden config]
+    A --> F[📁 Desktop]
+    A --> G[📁 Documents]
+    A --> H[📁 Downloads]
+    
+    style A fill:#667eea,stroke:#333,stroke-width:3px,color:#fff
+    style B fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff
+    style C fill:#f093fb,stroke:#333,stroke-width:2px,color:#fff
+    style D fill:#4facfe,stroke:#333,stroke-width:2px,color:#fff
+    style E fill:#43e97b,stroke:#333,stroke-width:2px,color:#fff
+    style F fill:#fa709a,stroke:#333,stroke-width:2px,color:#fff
+    style G fill:#fee140,stroke:#333,stroke-width:2px,color:#000
+    style H fill:#30cfd0,stroke:#333,stroke-width:2px,color:#fff
 ```
 
 #### 4. /usr - User Programs
