@@ -282,25 +282,5 @@ user1 ALL=(ALL) NOPASSWD: /bin/systemctl
 
 ---
 
-## 🚀 Suggested Next Topics
 
-- File permissions & ACLs
-- umask and default permissions
-- Central auth (LDAP, FreeIPA)
-- Auditing with `last`, `faillog`
-
----
-
-## 🤝 Contributing
-
-Add:
-- More labs
-- Troubleshooting cases
-- Advanced sudo rules
-
----
-
-## 📄 License
-
-MIT License
 
