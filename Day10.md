@@ -296,25 +296,4 @@ sudo vigr
 
 ---
 
-## 🚀 Next Topics
-
-- sudoers & privilege escalation
-- PAM authentication flow
-- LDAP / FreeIPA integration
-- Audit with `faillog` and `lastlog`
-
----
-
-## 🤝 Contributing
-
-Feel free to:
-- Add more labs
-- Add MCQs
-- Improve troubleshooting scenarios
-
----
-
-## 📄 License
-
-MIT License
 
