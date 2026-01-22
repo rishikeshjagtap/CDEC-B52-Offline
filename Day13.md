@@ -335,25 +335,5 @@ Directories:
 
 ---
 
-## 🚀 Suggested Next Topics
 
-- rsync & incremental backups
-- logrotate configuration
-- systemd timers
-- Backup strategies in production
-
----
-
-## 🤝 Contributing
-
-Add:
-- More labs
-- Production cron examples
-- Backup scripts
-
----
-
-## 📄 License
-
-MIT License
 
