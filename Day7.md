@@ -858,14 +858,5 @@ This guide covered 9 essential topics for Day 7:
 4. Learn to save and quit
 5. Master the basic commands
 
-### Next Steps
-
-1. Practice Vim daily
-2. Learn more advanced commands
-3. Customize Vim configuration
-4. Learn Vim plugins
-5. Master Vim for productivity
-
----
 
 **Happy Learning! 🚀**
