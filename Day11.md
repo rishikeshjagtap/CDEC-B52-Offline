@@ -227,24 +227,4 @@ ls -l test.txt
 
 ---
 
-## 🚀 Suggested Next Topics
 
-- chmod numeric vs symbolic
-- Special permissions (SUID, SGID, Sticky bit)
-- ACLs (setfacl, getfacl)
-- umask and defaults
-
----
-
-## 🤝 Contributing
-
-Add:
-- More labs
-- Troubleshooting cases
-- Advanced permission scenarios
-
----
-
-## 📄 License
-
-MIT License
