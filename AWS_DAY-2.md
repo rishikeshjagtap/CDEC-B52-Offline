@@ -216,31 +216,6 @@ Benefits:
 
 ------------------------------------------------------------------------
 
-# 📁 Suggested Repo Structure
 
-    aws-devops-training/
-    │
-    ├── README.md
-    └── images/
-        ├── aws-dashboard-overview.png
-        ├── aws-region-az-architecture.png
-        ├── aws-ec2-architecture.png
-        ├── aws-ubuntu-instance-launch.png
-        └── aws-production-architecture.png
 
-------------------------------------------------------------------------
 
-# ⭐ DevOps Trainer Notes
-
-This README follows **real DevOps repository design**:
-
--   Clean sections
--   Architecture visuals
--   Practical commands
--   Interview prep
-
-Perfect for:
-
-✔ Training batches\
-✔ GitHub portfolio\
-✔ AWS beginner bootcamps
