@@ -1,8 +1,6 @@
 # 🚀 AWS Fundamentals — Dashboard, Region, AZ & EC2 Ubuntu Launch (Complete Guide)
 
-> 📘 **Single GitHub README File**  
-> Beginner → Intermediate | DevOps & AWS Foundation  
-> Covers AWS Dashboard, Region vs AZ, EC2 Basics, and Launching Your First Ubuntu Instance.
+> 
 
 ---
 
