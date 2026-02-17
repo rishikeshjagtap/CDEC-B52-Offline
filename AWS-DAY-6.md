@@ -1,9 +1,4 @@
 # 💽 AWS EBS Volumes --- Types, Attach Volume, Partition & Mount (DevOps Practical Guide)
-
-> 📘 GitHub Ready README\
-> Covers EBS Volume Types, Attaching Volumes, Creating Partitions, and
-> Mounting Storage on Linux EC2.
-
 ------------------------------------------------------------------------
 
 # 📑 Table of Contents
@@ -240,23 +235,3 @@ Benefits:
 
 ------------------------------------------------------------------------
 
-# 📁 Suggested GitHub Repo Structure
-
-    aws-ebs-practical/
-    │
-    ├── README.md
-    └── images/
-        ├── aws-ebs-architecture.png
-        ├── aws-ebs-types.png
-        └── aws-ebs-attach.png
-
-------------------------------------------------------------------------
-
-# ⭐ DevOps Trainer Notes
-
-This README follows real DevOps repository design:
-
--   Practical Linux commands
--   Architecture diagrams
--   Step-by-step implementation
--   Interview-focused learning
